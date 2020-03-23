@@ -1,26 +1,9 @@
-Wagtail demo project
+Wagtail fawbesturn project
 =======================
 
-This is a demonstration project for the amazing [Wagtail CMS](https://github.com/wagtail/wagtail).
-
-The demo site is designed to provide examples of common features and recipes to introduce you to Wagtail development. Beyond the code, it will also let you explore the admin / editorial interface of the CMS.
-
-Note we do _not_ recommend using this project to start your own site - the demo is intended to be a springboard to get you started. Feel free to copy code from the demo into your own project.
+This project is based on [Wagtail CMS](https://github.com/wagtail/wagtail).
 
 ### Wagtail Features Demonstrated in This Demo
-
-This demo is aimed primarily at developers wanting to learn more about the internals of Wagtail, and assumes you'll be reading its source code. After browsing the features, pay special attention to code we've used for:
-
--   Dividing a project up into multiple apps
--   Custom content models and "contexts" in the "breads" and "locations" apps
--   A typical weblog in the "blog" app
--   Example of using a "base" app to contain misc additional functionality (e.g. Contact Form, About, etc.)
--   "StandardPage" model using mixins borrowed from other apps
--   Example of customizing the Wagtail Admin via _wagtail_hooks_
--   Example of using the Wagtail "snippets" system to represent bread categories, countries and ingredients
--   Example of a custom "Galleries" feature that pulls in images used in other content types in the system
--   Example of creating ManyToMany relationships via the Ingredients feature on BreadPage
--   Lots more
 
 **Document contents**
 
@@ -31,20 +14,11 @@ This demo is aimed primarily at developers wanting to learn more about the inter
 
 # Installation
 
-- [Vagrant](#setup-with-vagrant)
+
 - [Docker](#setup-with-docker)
-- [Virtualenv](#setup-with-virtualenv)
+- [Miniconda](#setup-with-virtualenv)
 - [Heroku](#deploy-to-heroku)
 
-If you're new to Python and/or Django, we suggest you run this project on a Virtual Machine using Vagrant or Docker (whichever you're most comfortable with). Both Vagrant and Docker will help resolve common software dependency issues. Developers more familiar with
-virtualenv and traditional Django app setup instructions should skip to [Setup with virtualenv](#setup-with-virtualenv).
-
-Setup with Vagrant
-------------------
-
-#### Dependencies
-* [Vagrant](https://www.vagrantup.com/)
-* [Virtualbox](https://www.virtualbox.org/)
 
 #### Installation
 Once you've installed the necessary dependencies run the following commands:
@@ -63,7 +37,7 @@ interface at [http://localhost:8000/admin/](http://localhost:8000/admin/).
 
 Log into the admin with the credentials ``admin / changeme``.
 
-Use `Ctrl+c` to stop the local server. To stop the Vagrant environment, run `exit` then `vagrant halt`.
+Use `Ctrl+c` to stop the local server.
 
 Setup with Docker
 -----------------
@@ -97,14 +71,13 @@ To tail the logs from the Docker containers in realtime, run:
 docker-compose logs -f
 ```
 
-Setup with Virtualenv
+Setup with Miniconda
 ---------------------
-You can run the Wagtail demo locally without setting up Vagrant or Docker and simply use Virtualenv, which is the [recommended installation approach](https://docs.djangoproject.com/en/1.10/topics/install/#install-the-django-code) for Django itself.
+You can run the Wagtail demo locally without setting up Docker and simply use Miniconda env.
 
 #### Dependencies
-* Python 3.4, 3.5 or 3.6
-* [Virtualenv](https://virtualenv.pypa.io/en/stable/installation/)
-* [VirtualenvWrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html) (optional)
+* Python 3.4, 3.5, 3.6 or 3.8
+* [Miniconda](https://virtualenv.pypa.io/en/stable/installation/)
 
 ### Installation
 
