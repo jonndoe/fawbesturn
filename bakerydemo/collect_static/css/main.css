@@ -65,7 +65,7 @@ p {
 }
 
 a, a:focus, a:visited {
-  color: #d4566b;
+  color: #fcfeff;
   text-decoration: none;
 }
 
@@ -75,7 +75,7 @@ a:hover {
 }
 
 a.btn {
-  background-color: #d4566b;
+  background-color: #fcfeff;
   color: white;
   display: inline-block;
   font-family: 'Lato', sans-serif;
@@ -196,7 +196,7 @@ img {
   background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.01) 1%,rgba(0,0,0,1) 100%);
 }
 blockquote {
-  border-left: 5px solid #d4566b;
+  border-left: 5px solid #fcfeff;
   margin: 0 0 50px;
 }
 blockquote p {
@@ -250,7 +250,7 @@ cite {
   margin: 0 0 0;
 }
 .logo:hover {
-  color: #d4566b;
+  color: #fcfeff;
   text-decoration: none;
 }
 .search {
@@ -275,7 +275,7 @@ cite {
   width: 20px;
 }
 .search-icon svg {
-  fill: #d4566b;
+  fill: #fcfeff;
   height: 20px;
   width: 20px;
 }
@@ -342,9 +342,9 @@ nav {
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover,
 .nav-pills>li.active, .nav-pills>li:hover, .nav>li>a:focus, .nav>li>a:hover {
-  color: #d4566b;
+  color: #fcfeff;
   background-color: transparent;
-  border-top: 1px solid #d4566b;
+  border-top: 1px solid #fcfeff;
   font-weight: 400;
 }
 .nav-pills> li:first-of-type > a {
@@ -352,7 +352,7 @@ nav {
 }
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
   background-color: transparent;
-  border-top: 1px solid #d4566b;
+  border-top: 1px solid #fcfeff;
 }
 
 .dropdown-menu {
@@ -370,7 +370,7 @@ nav {
 
 .dropdown-menu > li> a:hover {
   background-color: transparent;
-  color: #d4566b;
+  color: #fcfeff;
 }
 /* Menu dropdown hack to allow toggling */
 li.has-submenu a.allow-toggle {

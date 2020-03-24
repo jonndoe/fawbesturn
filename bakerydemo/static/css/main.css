@@ -18,7 +18,7 @@ body {
   padding-top: 0;
   padding-bottom: 0;
   font-size: 19px;
-  font-family: 'Alegreya', serif;
+  font-family: 'Roboto', serif;
   background: rgb(255,255,255);
   background: linear-gradient(135deg,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(233,228,221,1) 100%);
   min-height: 100vh;
@@ -65,17 +65,17 @@ p {
 }
 
 a, a:focus, a:visited {
-  color: #d4566b;
+  color: #d4d7d9;
   text-decoration: none;
 }
 
 a:hover {
-  color: #eb7400;
+  color: #575454;
   text-decoration: none;
 }
 
 a.btn {
-  background-color: #d4566b;
+  background-color: #d4d7d9;
   color: white;
   display: inline-block;
   font-family: 'Lato', sans-serif;
@@ -87,7 +87,7 @@ a.btn {
 }
 
 a.btn:hover {
-  background-color: #eb7400;
+  background-color: #575454;
   color: white;
 }
 
@@ -196,7 +196,7 @@ img {
   background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.01) 1%,rgba(0,0,0,1) 100%);
 }
 blockquote {
-  border-left: 5px solid #d4566b;
+  border-left: 5px solid #d4d7d9;
   margin: 0 0 50px;
 }
 blockquote p {
@@ -232,7 +232,7 @@ cite {
   padding: 15px 0 15px;
   width: 100%;
   background: rgb(25,17,18);
-  background: linear-gradient(135deg, rgba(25,17,18,1) 0%,rgba(55,28,25,1) 100%);
+  background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%,rgba(21,38,44,0.8) 100%);
   z-index: 10;
 }
 .header h3 {
@@ -250,7 +250,7 @@ cite {
   margin: 0 0 0;
 }
 .logo:hover {
-  color: #d4566b;
+  color: #d4d7d9;
   text-decoration: none;
 }
 .search {
@@ -275,7 +275,7 @@ cite {
   width: 20px;
 }
 .search-icon svg {
-  fill: #d4566b;
+  fill: #d4d7d9;
   height: 20px;
   width: 20px;
 }
@@ -321,7 +321,7 @@ nav {
 .nav-pills>li, .nav-pills>li, .nav>li>a, .nav>li>a {
   border-top: 1px solid transparent;
 }
-/* The following is to stop a pixel shift on hover */ 
+/* The following is to stop a pixel shift on hover */
 .nav-pills>li.breads {
   width: 90px;
 }
@@ -342,9 +342,9 @@ nav {
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover,
 .nav-pills>li.active, .nav-pills>li:hover, .nav>li>a:focus, .nav>li>a:hover {
-  color: #d4566b;
+  color: #d4d7d9;
   background-color: transparent;
-  border-top: 1px solid #d4566b;
+  border-top: 1px solid #d4d7d9;
   font-weight: 400;
 }
 .nav-pills> li:first-of-type > a {
@@ -352,7 +352,7 @@ nav {
 }
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
   background-color: transparent;
-  border-top: 1px solid #d4566b;
+  border-top: 1px solid #d4d7d9;
 }
 
 .dropdown-menu {
@@ -370,7 +370,7 @@ nav {
 
 .dropdown-menu > li> a:hover {
   background-color: transparent;
-  color: #d4566b;
+  color: #d4d7d9;
 }
 /* Menu dropdown hack to allow toggling */
 li.has-submenu a.allow-toggle {
@@ -419,7 +419,7 @@ li.has-submenu a.allow-toggle {
 
 /* Breadcrumbs */
 .breadcrumb-container {
-  background: linear-gradient(to right, rgba(21,38,44,0.8) 0%,rgba(0,0,0,0.9) 100%);
+  background: linear-gradient(to right, rgba(21,38,44,0.8) 0%,rgba(21,38,44,0.8) 0%);
   margin-top: -1px;
   position: relative;
   z-index: 3;
@@ -468,7 +468,7 @@ nav[role=pagination] {
 .location-list-title {
   line-height: 270px;
   height: 270px;
-  background-color: #eb7400;
+  background-color: #575454;
 }
 .location-list-title img {
   background-color: rgba(233,228,221,1);
@@ -570,7 +570,7 @@ time.location-time {
 
 .blog-list-item .image {
   overflow: hidden;
-  background-color: #eb7400;
+  background-color: #fff;
   flex: 1 0 auto;
 }
 
@@ -656,7 +656,7 @@ span.outline {
 }
 
 .bread-list-item .image {
-  background-color: #eb7400;
+  background-color: #575454;
   margin: 0;
   max-width: 180px;
   max-height: 180px;
@@ -733,7 +733,7 @@ span.outline {
   margin-right: 10px;
 }
 
-.form-page .fieldWrapper ul, 
+.form-page .fieldWrapper ul,
 .form-page .fieldWrapper li {
   list-style: none;
   padding: 0;
@@ -870,7 +870,7 @@ span.outline {
 .homepage .promo h2,
 .homepage .promo h3,
 .homepage .promo h4 {
-  color: #eb7400;
+  color: #575454;
   font-weight: 200;
 }
 .homepage .promo p,
@@ -962,7 +962,7 @@ span.outline {
 }
 .homepage .feature-2 figure,
 .homepage .feature-3 figure {
-  background-color: #eb7400;
+  background-color: #575454;
   margin: 0;
 }
 @media (max-width: 766px) {
