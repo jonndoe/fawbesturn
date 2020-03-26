@@ -344,7 +344,7 @@ nav {
 .nav-pills>li.active, .nav-pills>li:hover, .nav>li>a:focus, .nav>li>a:hover {
   color: #d4d7d9;
   background-color: transparent;
-  border-top: 1px solid #d4d7d9;
+
   font-weight: 400;
 }
 .nav-pills> li:first-of-type > a {
