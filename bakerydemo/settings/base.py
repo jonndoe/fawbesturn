@@ -69,7 +69,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.cache.UpdateCacheMiddleware', # cache
+    #'django.middleware.cache.UpdateCacheMiddleware', # cache
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',    # static for production
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -82,7 +82,7 @@ MIDDLEWARE = [
     'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 
-    'django.middleware.cache.FetchFromCacheMiddleware', # cache
+    #'django.middleware.cache.FetchFromCacheMiddleware', # cache
 
 ]
 

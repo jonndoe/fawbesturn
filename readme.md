@@ -150,3 +150,38 @@ and configure [SMTP settings](https://docs.djangoproject.com/en/1.10/topics/emai
 ### Ownership of demo content
 
 All content in the demo is public domain. Textual content in this project is either sourced from Wikipedia or is lorem ipsum. All images are from either Wikimedia Commons or other copyright-free sources.
+
+
+### How to make wagtail to resize images on uploading (to save space on server)
+
+- login to server
+- activate env(miniconda) on server
+- `pip install django-imagekit`
+- `sudo nano /home/habrauser/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/project_template/project_name/settings/base.py`
+  here we need to add 'imagekit' to INSTALLED_APPS
+  
+- `sudo nano /home/sammy/miniconda3/envs/env38_django/lib/python3.8/site-packages/wagtail/images/models.py `
+  add 
+     from imagekit.models import ImageSpecField, ProcessedImageField
+     from imagekit.processors import ResizeToFill, Adjust, ResizeToFit
+     
+  modify AbstractImage:
+  
+    `file = ProcessedImageField(
+        verbose_name=_('file'), 
+        upload_to=get_upload_to, 
+        width_field='width', 
+        height_field='height',
+        ``
+        processors = [
+                     ResizeToFit(1600, 500,
+                                 # upscale=False
+                                 ),
+                 ],
+        format='JPEG',
+        options={'quality': 60},
+    )`
+    
+- `python manage.py makemigrations`
+- `python manage.py migrate`
+  
