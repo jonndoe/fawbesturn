@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'bakerydemo.breads',
     'bakerydemo.locations',
     'bakerydemo.search',
+    #myapp
+    'bakerydemo.usersapp',
 
     'wagtail.contrib.search_promotions',
     'wagtail.contrib.forms',

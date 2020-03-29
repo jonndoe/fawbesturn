@@ -39,10 +39,6 @@
                     {% endfor %}
                 {% endif %}
 
-                <div class="alert alert-success" role="alert">
-  This is a success alert—check it out!
-</div>
-
                 <div class="container">
                     <p>Comments {% get_comment_count for page as comment_count %} {{ comment_count }}</p>
                     {% render_comment_list for page %}
