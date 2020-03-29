@@ -4,6 +4,8 @@ from wagtail.contrib.modeladmin.options import (
 from bakerydemo.breads.models import Country, BreadIngredient, BreadType
 from bakerydemo.base.models import People, FooterText
 
+from wagtail.core import hooks
+
 '''
 N.B. To see what icons are available for use in Wagtail menus and StreamField block types,
 enable the styleguide in settings:
@@ -70,3 +72,14 @@ class BakeryModelAdminGroup(ModelAdminGroup):
 # you only need to register the ModelAdminGroup class with Wagtail:
 modeladmin_register(BreadModelAdminGroup)
 modeladmin_register(BakeryModelAdminGroup)
+
+
+# customize admin panel (example only)
+# it will hide leftbar items in admin panel
+@hooks.register('construct_main_menu')
+def hide_explorer_menu_item_from_username(request, menu_items):
+  if request.user.username == 'user9':
+    menu_items[:] = [item for item in menu_items if item.name != 'explorer']
+
+
+

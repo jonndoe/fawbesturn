@@ -185,3 +185,21 @@ All content in the demo is public domain. Textual content in this project is eit
 - `python manage.py makemigrations`
 - `python manage.py migrate`
   
+  
+  
+  
+  
+### Use wagtail_hooks to customize admin menu items:
+
+You can use Wagtail's Hooks functionality, particularly the construct_main_menu hook:
+
+Create a wagtail_hooks.py file in your corresponding application, with something like the following (from the Wagtail Docs):
+
+`from wagtail.core import hooks`
+
+@hooks.register('construct_main_menu')
+def hide_explorer_menu_item_from_frank(request, menu_items):
+  if request.user.username == 'frank':
+    `menu_items[:] = [item for item in menu_items if item.name != 'explorer']
+
+  
