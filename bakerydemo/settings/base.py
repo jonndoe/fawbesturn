@@ -70,6 +70,11 @@ INSTALLED_APPS = [
     # comments
     'django.contrib.sites',
     'django_comments',
+
+    # django-allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -107,6 +112,16 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
 
 WSGI_APPLICATION = 'bakerydemo.wsgi.application'
 
@@ -190,3 +205,15 @@ WAGTAIL_SITE_NAME = "fawbesturn"
 
 # comments
 SITE_ID = 1
+
+# django-allauth
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+ACCOUNT_CONFIRM_EMAIL_ON_GET = False
+ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_LOGIN_ON_PASSWORD_RESET = True
+ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
+ACCOUNT_PRESERVE_USERNAME_CASING = False
+ACCOUNT_USERNAME_BLACKLIST = ["admin",]
+ACCOUNT_USERNAME_MIN_LENGTH = 2

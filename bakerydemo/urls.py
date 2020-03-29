@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^api/v2/', api_router.urls),
 
     url(r'^comments/', include('django_comments.urls')),
+    url(r'^accounts/', include('allauth.urls')),
 ]
 
 
