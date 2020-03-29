@@ -82,9 +82,6 @@ class BlogPage(Page):
         ImageChooserPanel('image'),
         StreamFieldPanel('body'),
         FieldPanel('date_published'),
-        InlinePanel(
-            'blog_person_relationship', label="Author(s)",
-            panels=None, min_num=1),
         FieldPanel('tags'),
     ]
 
@@ -228,6 +225,10 @@ class PersonIndexPage(Page):
     it could be used for any type of page content that only needs a title,
     image, introduction and body field
     """
+    promote_panels = []
+    settings_panels = []
+    content_panels = []
+
 
     # Speficies that only BlogPage objects can live under this index page
     subpage_types = ['BlogPage']
