@@ -88,6 +88,9 @@ class BlogPage(Page):
         FieldPanel('tags'),
     ]
 
+    promote_panels = []
+    settings_panels = []
+
     search_fields = Page.search_fields + [
         index.SearchField('body'),
     ]
