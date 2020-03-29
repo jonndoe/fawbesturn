@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load navigation_tags wagtailimages_tags %}
+{% load wagtailcore_tags navigation_tags wagtailimages_tags comments %}
 
 {% block content %}
 
@@ -38,6 +38,32 @@
                         <a href="{{ tag.url }}" class="btn btn-sm">{{ tag }}</a>
                     {% endfor %}
                 {% endif %}
+
+                <div class="container">
+                    <p>Comments {% get_comment_count for page as comment_count %} {{ comment_count }}</p>
+                    {% render_comment_list for page %}
+                </div>
+                <div class="container">
+                    <p>FOR AUTHENTICATED USERS:</p>
+                    {% if user.is_authenticated %}
+                        {% get_comment_form for page as form %}
+                        <form action="{% comment_form_target %}" method="POST">
+                        {% csrf_token %}
+                        {{ form.comment }}
+                        {{ form.honeypot }}
+                        {{ form.content_type }}
+                        {{ form.object_pk }}
+                        {{ form.timestamp }}
+                        {{ form.security_hash }}
+                        <input type="hidden" name="next" value="{% pageurl page %}" />
+                        <input type="submit" value="Add comment" id="id_submit" />
+                        </form>
+                    {% else %}
+                        <p>Please <a href="{% url 'wagtailadmin_home' %}">log in</a> to leave a comment.</p>
+                    {% endif %}
+                </div>
+
+
             </div>
         </div>
     </div>
