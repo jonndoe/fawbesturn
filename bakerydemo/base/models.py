@@ -423,12 +423,24 @@ def create_user_group_and_pages(sender, **kwargs):
     # Save new page as first revision
     person_index_page.save_revision()
 
-    # Create new add GroupPagePermission
+    # Create new add, edit, publish GroupPagePermission
+    translator_perms = ['add', 'edit', 'publish',]
+    for perm in translator_perms:
+        GroupPagePermission.objects.create(
+            group=new_group,
+            page=person_index_page,
+            permission_type=perm
+        )
+
+
+
+    '''
     GroupPagePermission.objects.create(
         group=new_group,
         page=person_index_page,
         permission_type='add'
     )
+    '''
 
     # Create new GroupCollectionPermission for Profile Images collection
     GroupCollectionPermission.objects.create(

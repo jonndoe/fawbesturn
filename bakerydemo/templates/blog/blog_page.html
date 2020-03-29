@@ -16,10 +16,14 @@
                 <div class="blog-meta">
                     {% if page.authors %}
                         <div class="blog-avatars">
-                            {% for author in page.authors %}
-                                <div class="author">{% image author.image fill-50x50-c100 class="blog-avatar" %}
-                                    {{ author.first_name }} {{ author.last_name }}</div>
-                            {% endfor %}
+                            <div class="author">
+                                <img src="{% if page.owner.wagtail_userprofile.avatar %}{{ page.owner.wagtail_userprofile.avatar.url }}{% else %}http://www.gravatar.com/avatar/d9de46e1d58a2d3e76c948fcb82f04dc?s=100&d=mm{% endif %}" class="blog-avatar">
+                                {% if page.owner.first_name %}
+                                    {{ page.owner.first_name }} {{ page.owner.last_name }}
+                                {% else %}
+                                    {{ page.owner }}
+                                {% endif %}
+                            </div>
                         </div>
                     {% endif %}
 

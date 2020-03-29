@@ -627,7 +627,8 @@ span.outline {
 .blog-avatar {
     border-radius: 100%;
     display: inline;
-    width: unset;
+    width: 50px;
+    height: 50px;
 }
 .blog-avatars {
     margin-bottom: 20px;

@@ -38,9 +38,7 @@
                                 {% if blog.date_published %}
                                     {{ blog.date_published }} by 
                                 {% endif %}
-                                {% for author in blog.authors %}
-                                    {{ author }}{% if not forloop.last %}, {% endif %}
-                                {% endfor %}
+                                {{ blog.owner }}
                             </div>
                         </a>
                     </li>
