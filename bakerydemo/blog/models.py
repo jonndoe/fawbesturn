@@ -123,7 +123,7 @@ class BlogPage(Page):
         return tags
 
     # Specifies parent to BlogPage as being BlogIndexPages
-    parent_page_types = ['BlogIndexPage']
+    parent_page_types = ['BlogIndexPage', 'PersonIndexPage',]
 
     # Specifies what content types can exist as children of BlogPage.
     # Empty list means that no child content types are allowed.
@@ -169,9 +169,8 @@ class BlogIndexPage(RoutablePageMixin, Page):
     # http://docs.wagtail.io/en/latest/getting_started/tutorial.html#overriding-context
     def get_context(self, request):
         context = super(BlogIndexPage, self).get_context(request)
-        context['posts'] = BlogPage.objects.descendant_of(
-            self).live().order_by(
-            '-date_published')
+        #context['posts'] = BlogPage.objects.descendant_of(self).live().order_by('-date_published')
+        context['posts'] = BlogPage.objects.live().order_by('-date_published')
         return context
 
     # This defines a Custom view that utilizes Tags. This view will return all
@@ -217,3 +216,17 @@ class BlogIndexPage(RoutablePageMixin, Page):
             tags += post.get_tags
         tags = sorted(set(tags))
         return tags
+
+
+
+class PersonIndexPage(Page):
+    """
+    A generic content page. On this demo site we use it for an about page but
+    it could be used for any type of page content that only needs a title,
+    image, introduction and body field
+    """
+
+    # Speficies that only BlogPage objects can live under this index page
+    subpage_types = ['BlogPage']
+
+    pass
