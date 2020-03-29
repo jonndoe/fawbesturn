@@ -1050,3 +1050,22 @@ span.outline {
 #id_honeypot {
     display: none;
 }
+
+.messages .error {
+    background-color: #b4191f;
+}
+
+.messages .success {
+    background-color: #157b57;
+}
+.messages {
+    position: relative;
+    z-index: 5;
+    background-color: #333;
+    margin: 1em 0;
+    z-index: 5;
+}
+
+.alert {
+    margin-bottom: 0px;
+}

@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
     'wagtailfontawesome',
+    'crispy_forms',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -217,3 +218,6 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 ACCOUNT_PRESERVE_USERNAME_CASING = False
 ACCOUNT_USERNAME_BLACKLIST = ["admin",]
 ACCOUNT_USERNAME_MIN_LENGTH = 2
+
+# crispy forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
