@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a716e7dd-4695-4cd9-9fd1-027a8fc5bcb1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bakerydemo/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/bakerydemo/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakerydemo/templates/blog/blog_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/bakerydemo/templates/blog/blog_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakerydemo/templates/includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/bakerydemo/templates/includes/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakerydemo/templates/tags/top_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/bakerydemo/templates/tags/top_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bakerydemo/static/css/wagtail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakerydemo/base/wagtail_hooks.py" beforeDir="false" afterPath="$PROJECT_DIR$/bakerydemo/base/wagtail_hooks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakerydemo/collect_static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/bakerydemo/collect_static/css/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,29 +16,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bakerydemo/templates/blog/blog_page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7764">
-              <caret line="432" column="6" selection-start-line="432" selection-start-column="6" selection-end-line="432" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bakerydemo/templates/tags/table_of_contents_menu.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bakerydemo/templates/tags/sidebar_menu.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bakerydemo/templates/tags/top_menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="339">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -57,23 +43,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="428">
-                <caret line="204" column="2" selection-start-line="204" selection-start-column="2" selection-end-line="204" selection-end-column="2" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bakerydemo/base/wagtail_hooks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="614">
+              <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
               <folding>
                 <element signature="e#0#102#0" expanded="true" />
               </folding>
@@ -82,10 +56,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bakerydemo/static/css/main.css">
+        <entry file="file://$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/core/wagtail_hooks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="1082" selection-start-line="1082" selection-end-line="1082" />
+            <state>
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bakerydemo/templates/blog/blog_page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7923">
+              <caret line="432" column="6" selection-start-line="432" selection-start-column="6" selection-end-line="432" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bakerydemo/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,11 +101,21 @@
       <find>class=&quot;messages&quot;</find>
       <find>blog-avatar</find>
       <find>class=&quot;search&quot;</find>
+      <find>Welcome to the %(site_name)s Wagtail CMS</find>
+      <find>Wagtail CMS</find>
+      <find>class=&quot;wagtail-logo wagtail-logo__eye--open</find>
+      <find>register_page_listing_more_buttons</find>
+      <find>construct_page_listing_buttons</find>
+      <find>PageListingButton</find>
     </findStrings>
     <replaceStrings>
       <replace>#fcfeff</replace>
       <replace>#d4d7d9</replace>
+      <replace>Welcome to the %(site_name)s</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/admin/static/wagtailadmin/images</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,11 +145,14 @@
         <option value="$PROJECT_DIR$/bakerydemo/collect_static/css/main.css" />
         <option value="$PROJECT_DIR$/bakerydemo/blog/models.py" />
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/bakerydemo/base/wagtail_hooks.py" />
         <option value="$PROJECT_DIR$/bakerydemo/static/css/main.css" />
         <option value="$PROJECT_DIR$/bakerydemo/templates/blog/blog_page.html" />
         <option value="$PROJECT_DIR$/bakerydemo/templates/includes/header.html" />
         <option value="$PROJECT_DIR$/bakerydemo/templates/tags/top_menu.html" />
+        <option value="$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/admin/templates/wagtailadmin/home.html" />
+        <option value="$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/admin/templates/wagtailadmin/shared/animated_logo.html" />
+        <option value="$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/admin/templates/wagtailadmin/base.html" />
+        <option value="$PROJECT_DIR$/bakerydemo/base/wagtail_hooks.py" />
       </list>
     </option>
   </component>
@@ -181,14 +191,37 @@
               <item name="fawbesturn" type="462c0819:PsiDirectoryNode" />
               <item name="bakerydemo" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fawbesturn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fawbesturn" type="462c0819:PsiDirectoryNode" />
-              <item name="bakerydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="tags" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="fawbesturn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.8 (env38_fawbesturn) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="fawbesturn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.8 (env38_fawbesturn) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fawbesturn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.8 (env38_fawbesturn) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="wagtail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fawbesturn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.8 (env38_fawbesturn) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="wagtail" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -198,10 +231,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bakerydemo/static/js" />
+    <property name="last_opened_file_path" value="$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/admin/static/wagtailadmin/images" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/admin/static/wagtailadmin/images" />
       <recent name="$PROJECT_DIR$/bakerydemo/static/js" />
       <recent name="$PROJECT_DIR$/bakerydemo/templates" />
     </key>
@@ -235,7 +269,7 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34630138" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2109589" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -246,7 +280,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.08057395" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.12472406" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3290653" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -258,60 +292,9 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bakerydemo/settings/prod.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bakerydemo/settings/dev.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/images/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="68" column="18" selection-start-line="66" selection-end-line="79" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bakerydemo/templates/blocks/heading_block.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bakerydemo/templates/base/include/header-index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bakerydemo/templates/base/include/header-hero.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bakerydemo/templates/base/include/header.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/bakerydemo/templates/includes/head.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-347" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bakerydemo/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/allauth/urls.py">
@@ -498,16 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bakerydemo/base/wagtail_hooks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-          <folding>
-            <element signature="e#0#102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -522,13 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="1082" selection-start-line="1082" selection-end-line="1082" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bakerydemo/templates/blog/blog_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7764">
-          <caret line="432" column="6" selection-start-line="432" selection-start-column="6" selection-end-line="432" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -560,8 +526,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bakerydemo/templates/tags/top_menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="339">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/admin/templates/wagtailadmin/shared/animated_logo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/admin/templates/wagtailadmin/userbar/base.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/admin/templates/wagtailadmin/userbar/item_admin.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/admin/templates/wagtailadmin/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bakerydemo/static/css/wagtail.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bakerydemo/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bakerydemo/templates/blog/blog_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7923">
+          <caret line="432" column="6" selection-start-line="432" selection-start-column="6" selection-end-line="432" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/core/hooks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/env38_fawbesturn/lib/python3.8/site-packages/wagtail/core/wagtail_hooks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bakerydemo/base/wagtail_hooks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
+          <folding>
+            <element signature="e#0#102#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

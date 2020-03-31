@@ -6,6 +6,16 @@ from bakerydemo.base.models import People, FooterText
 
 from wagtail.core import hooks
 
+# custom css to wagtailadmin
+from django.templatetags.static import static
+from django.utils.html import format_html
+
+from wagtail.admin import widgets as wagtailadmin_widgets
+
+from wagtail.admin.action_menu import ActionMenuItem
+
+
+
 '''
 N.B. To see what icons are available for use in Wagtail menus and StreamField block types,
 enable the styleguide in settings:
@@ -83,3 +93,149 @@ def hide_explorer_menu_item_from_username(request, menu_items):
 
 
 
+
+
+
+
+"""Add custom .css hook to wagtail_admin"""
+#from django.contrib.staticfiles.templatetags.staticfiles import static
+#from django.utils.html import format_html
+
+#from wagtail.core import hooks
+
+
+# Register a custom css file for the wagtail admin.
+@hooks.register("insert_global_admin_css", order=100)
+def global_admin_css():
+    """Add /static/css/wagtail.css."""
+    return format_html('<link rel="stylesheet" href="{}">', static("css/wagtail.css"))
+
+
+
+
+@hooks.register('register_page_listing_more_buttons')
+def page_listing_more_buttons(page, page_perms, is_parent=False):
+    yield wagtailadmin_widgets.Button(
+        'A dropdown button',
+        '/goes/to/a/url/',
+        priority=60
+    )
+
+
+
+@hooks.register('construct_page_action_menu')
+def remove_unpublish_option(menu_items, request, context):
+    menu_items[:] = [item for item in menu_items if item.name != 'action-unpublish']
+
+@hooks.register('construct_page_action_menu')
+def remove_submit_to_moderator_option(menu_items, request, context):
+    menu_items[:] = [item for item in menu_items if item.name != 'action-submit']
+
+
+
+
+class GuacamoleMenuItem(ActionMenuItem):
+    label = "example link"
+
+    def get_url(self, request, context):
+        return "https://www.youtube.com/watch?v=dNJdJIwCF_Y"
+
+
+@hooks.register('register_page_action_menu_item')
+def register_guacamole_menu_item():
+    return GuacamoleMenuItem(order=10)
+
+
+
+# add more welcome panel
+from django.utils.safestring import mark_safe
+
+#from wagtail.core import hooks
+
+class WelcomePanel:
+    order = 50
+
+    def render(self):
+        return mark_safe("""
+        <section class="panel summary nice-padding">
+          <h3>No, but seriously -- welcome to the admin homepage.</h3>
+        </section>
+        """)
+
+@hooks.register('construct_homepage_panels')
+def add_another_welcome_panel(request, panels):
+  return panels.append( WelcomePanel() )
+
+
+
+from django.urls import reverse
+
+#from wagtail.core import hooks
+from wagtail.admin.menu import MenuItem
+
+@hooks.register('register_admin_menu_item')
+def register_user10_menu_item():
+  return MenuItem('example Item', reverse('search'), classnames='icon icon-folder-inverse', order=10000)
+
+
+
+
+
+@hooks.register('filter_form_submissions_for_user')
+def construct_forms_for_user(user, queryset):
+    if not user.is_superuser:
+        queryset = queryset.none()
+
+    return queryset
+
+
+
+class UserbarPuppyLinkItem:
+    def render(self, request):
+        return '<li><a href="http://cuteoverload.com/tag/puppehs/" ' \
+            + 'target="_parent" class="action icon icon-wagtail">Puppies!</a></li>'
+
+@hooks.register('construct_wagtail_userbar')
+def add_puppy_link_item(request, items):
+    return items.append( UserbarPuppyLinkItem() )
+
+
+
+
+
+
+@hooks.register('register_page_listing_buttons')
+def page_custom_listing_buttons(page, page_perms, is_parent=False):
+    yield wagtailadmin_widgets.ButtonWithDropdownFromHook(
+        'More Actions',
+        hook_name='my_button_dropdown_hook',
+        page=page,
+        page_perms=page_perms,
+        is_parent=is_parent,
+        priority=50
+    )
+
+@hooks.register('my_button_dropdown_hook')
+def page_custom_listing_more_buttons(page, page_perms, is_parent=False):
+    if page_perms.can_move():
+        yield wagtailadmin_widgets.Button('Move', reverse('wagtailadmin_pages:move', args=[page.id]), priority=10)
+    if page_perms.can_delete():
+        yield wagtailadmin_widgets.Button('Delete', reverse('wagtailadmin_pages:delete', args=[page.id]), priority=30)
+    if page_perms.can_unpublish():
+        yield wagtailadmin_widgets.Button('Unpublish', reverse('wagtailadmin_pages:unpublish', args=[page.id]), priority=40)
+
+
+@hooks.register('construct_page_listing_buttons')
+def delete_page_listing_button_items(buttons, page, page_perms, is_parent=False, context=None):
+    #buttons[:] = [button for button in buttons if button != 'EDIT']
+    buttons[:] = [button for button in buttons if button.label != 'Edit']
+    #assert False
+    for button in buttons:
+        print(button.label)
+    print(page.owner, 'pageeeeeeeeeeeeeeeeeeeeee')
+    print(buttons)
+
+@hooks.register('construct_page_listing_buttons')
+def delete_page_listing_button_items(buttons, page, page_perms, is_parent=False, context=None):
+    # buttons[:] = [button for button in buttons if button != 'EDIT']
+    buttons[:] = [button for button in buttons if button.label != 'Смотреть на сайте']
