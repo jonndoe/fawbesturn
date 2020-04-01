@@ -52,6 +52,9 @@
                     {% if user.is_authenticated %}
                         {% get_comment_form for page as form %}
                         <form action="{% comment_form_target %}" method="POST">
+                            <div class="form-group">
+                                <textarea name="comment" class="form-control" rows="3">
+
                         {% csrf_token %}
 
                         {{ form.comment }}
@@ -60,10 +63,12 @@
                         {{ form.object_pk }}
                         {{ form.timestamp }}
                         {{ form.security_hash }}
+                                </textarea>
+                            </div>
 
 
                         <input type="hidden" name="next" value="{% pageurl page %}" />
-                        <input type="submit" value="Add comment" id="id_submit" />
+                        <input type="submit" class="btn btn-default" value="Add comment" id="id_submit" />
                         </form>
                     {% else %}
                         <p>Please <a href="{% url 'account_login' %}">log in</a> to leave a comment.</p>

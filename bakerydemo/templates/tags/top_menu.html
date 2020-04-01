@@ -16,7 +16,7 @@
 
 {% if request.user.is_authenticated %}
 <li class="presentation">
-    <a href="{% url 'wagtailadmin_home' %}" role="menuitem">Hello, <b>{{ request.user.username }}</b></a>
+    <a href="{% url 'wagtailadmin_home' %}" role="menuitem">Dashboard,<b>{{ request.user.username }}</b></a>
 </li>
 <li class="presentation">
     <a href="{% url 'account_logout' %}" role="menuitem">LogOut</a>
