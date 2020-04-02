@@ -3,15 +3,11 @@ import os
 
 
 
-ALLOWED_HOSTS = ['80.78.254.210','localhost', 'www.moreforum.ru']
+ALLOWED_HOSTS = ['80.78.254.210','localhost', 'www.moreforum.ru', 'www.drivedex.ru', 'drivedex.ru',]
 
 DEBUG = os.getenv('DJANGO_DEBUG', 'off') == 'on'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-# BASE_URL required for notification emails
-BASE_URL = 'http://localhost:8000'
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 # CACHING IN PRODUCTION
