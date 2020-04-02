@@ -43,36 +43,54 @@
                     {% endfor %}
                 {% endif %}
 
-                <div id="comments" class="container">
+
+                <div  class="container">
                     <p>Comments {% get_comment_count for page as comment_count %} {{ comment_count }}</p>
-                    {% render_comment_list for page %}
                 </div>
+
+
+
+
+
                 <div class="container">
-
-                    {% if user.is_authenticated %}
-                        {% get_comment_form for page as form %}
-                        <form action="{% comment_form_target %}" method="POST">
-                            <div class="form-group">
-
-
-                        {% csrf_token %}
-                        {{ form.comment }}
-                        {{ form.honeypot }}
-                        {{ form.content_type }}
-                        {{ form.object_pk }}
-                        {{ form.timestamp }}
-                        {{ form.security_hash }}
-
-                            </div>
-
-
-                        <input type="hidden" name="next" value="{% pageurl page %}#comments" />
-                        <input type="submit" class="btn btn-primary" value="Add comment" id="id_submit" />
-                        </form>
-                    {% else %}
-                        <p>Please <a href="{% url 'account_login' %}">log in</a> to leave a comment.</p>
-                    {% endif %}
+                {% if user.is_authenticated %}
+                    {% get_comment_form for page as form %}
+                    <form action="{% comment_form_target %}" method="POST">
+                        <div class="form-group">
+                    {% csrf_token %}
+                    {{ form.comment }}
+                    {{ form.honeypot }}
+                    {{ form.content_type }}
+                    {{ form.object_pk }}
+                    {{ form.timestamp }}
+                    {{ form.security_hash }}
+                        </div>
+                    <input type="hidden" name="next" value="{% pageurl page %}#comments" />
+                    <input type="submit" class="btn btn-primary" value="Add comment" id="id_submit" />
+                    </form>
+                {% else %}
+                    <p>Please <a href="{% url 'account_login' %}">log in</a> to leave a comment.</p>
+                {% endif %}
+                    <br>
                 </div>
+
+                 <div  class="list-group">
+                 {% get_comment_list for page as comment_list %}
+                 {% for comment in comment_list %}
+                     <a href="#!" class="list-group-item list-group-item-action flex-column align-items-start">
+                     <div class="d-flex w-100 justify-content-between">
+                       <h5 class="mb-1">{{ comment.user }}</h5>
+                       <h5 class="mb-1">{{ comment.submit_date }}</h5>
+                        <p class="mb-1">{{ comment.comment }}</p>
+                     </div>
+
+                     <small>Like    Dislike</small>
+                     </a>
+                 {% endfor %}
+                     <div id="comments"></div>
+                 </div>
+
+
 
             </div>
         </div>
