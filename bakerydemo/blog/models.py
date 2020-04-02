@@ -86,8 +86,8 @@ class BlogPage(Page):
     ]
 
 
-    #promote_panels = []
-    #settings_panels = []
+    promote_panels = []
+    settings_panels = []
 
 
     search_fields = Page.search_fields + [
@@ -240,9 +240,9 @@ class PersonIndexPage(Page):
     image, introduction and body field
     """
 
-    #promote_panels = []
-    #settings_panels = []
-    #content_panels = []
+    promote_panels = []
+    settings_panels = []
+    content_panels = []
 
 
     # Speficies that only BlogPage objects can live under this index page

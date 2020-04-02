@@ -1,8 +1,16 @@
+# this file to be removed after figuring out how to
+# get blogIndexPage displaying blogs based on tag provided.
+
+
 from django.http import HttpResponse
 import datetime
 
 from taggit.models import Tag
 from django.contrib import messages
+
+
+
+
 from django.shortcuts import redirect, render
 
 from bakerydemo.blog.models import BlogIndexPage, BlogPage
