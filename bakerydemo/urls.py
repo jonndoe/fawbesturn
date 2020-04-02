@@ -10,6 +10,13 @@ from wagtail.core import urls as wagtail_urls
 from bakerydemo.search import views as search_views
 from .api import api_router
 
+from bakerydemo.base.views import tag_archive
+
+from django.urls import path
+
+
+
+
 urlpatterns = [
     url(r'^django-admin/', admin.site.urls),
 
@@ -23,6 +30,7 @@ urlpatterns = [
 
     url(r'^comments/', include('django_comments.urls')),
     url(r'^accounts/', include('allauth.urls')),
+    path('<page>/tags/<tag>/', tag_archive, name='tag_archive'),
 ]
 
 

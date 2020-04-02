@@ -85,8 +85,10 @@ class BlogPage(Page):
         FieldPanel('tags'),
     ]
 
-    promote_panels = []
-    settings_panels = []
+
+    #promote_panels = []
+    #settings_panels = []
+
 
     search_fields = Page.search_fields + [
         index.SearchField('body'),
@@ -173,6 +175,8 @@ class BlogIndexPage(RoutablePageMixin, Page):
         context['posts'] = BlogPage.objects.live().order_by('-date_published')
         return context
 
+
+
     # This defines a Custom view that utilizes Tags. This view will return all
     # related BlogPages for a given Tag or redirect back to the BlogIndexPage.
     # More information on RoutablePages is at
@@ -183,6 +187,7 @@ class BlogIndexPage(RoutablePageMixin, Page):
 
         try:
             tag = Tag.objects.get(slug=tag)
+            print('tag is: ', tag)
         except Tag.DoesNotExist:
             if tag:
                 msg = 'There are no blog posts tagged with "{}"'.format(tag)
@@ -196,6 +201,7 @@ class BlogIndexPage(RoutablePageMixin, Page):
         }
         return render(request, 'blog/blog_index_page.html', context)
 
+
     def serve_preview(self, request, mode_name):
         # Needed for previews to work
         return self.serve(request)
@@ -203,7 +209,7 @@ class BlogIndexPage(RoutablePageMixin, Page):
     # Returns the child BlogPage objects for this BlogPageIndex.
     # If a tag is used then it will filter the posts by tag.
     def get_posts(self, tag=None):
-        posts = BlogPage.objects.live().descendant_of(self)
+        posts = BlogPage.objects.live()
         if tag:
             posts = posts.filter(tags=tag)
         return posts
@@ -218,6 +224,14 @@ class BlogIndexPage(RoutablePageMixin, Page):
         return tags
 
 
+    def get_post_tags(self):
+        tags = []
+        for post in self.get_posts():
+            tags += post.get_tags()
+        tags = sorted(set(tags))
+        return tags
+
+
 
 class PersonIndexPage(Page):
     """
@@ -225,12 +239,14 @@ class PersonIndexPage(Page):
     it could be used for any type of page content that only needs a title,
     image, introduction and body field
     """
-    promote_panels = []
-    settings_panels = []
-    content_panels = []
+
+    #promote_panels = []
+    #settings_panels = []
+    #content_panels = []
 
 
     # Speficies that only BlogPage objects can live under this index page
     subpage_types = ['BlogPage']
+
 
     pass
