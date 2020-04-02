@@ -146,7 +146,7 @@ def register_guacamole_menu_item():
     return GuacamoleMenuItem(order=10)
 
 
-
+'''
 # add more welcome panel
 from django.utils.safestring import mark_safe
 
@@ -158,16 +158,18 @@ class WelcomePanel:
     def render(self):
         return mark_safe("""
         <section class="panel summary nice-padding">
-          <h3>No, but seriously -- welcome to the admin homepage.</h3>
+          <h3>Just additional panel here.</h3>
         </section>
         """)
 
 @hooks.register('construct_homepage_panels')
 def add_another_welcome_panel(request, panels):
   return panels.append( WelcomePanel() )
+'''
 
 
 
+'''
 from django.urls import reverse
 
 #from wagtail.core import hooks
@@ -176,10 +178,20 @@ from wagtail.admin.menu import MenuItem
 @hooks.register('register_admin_menu_item')
 def register_user10_menu_item():
   return MenuItem('example Item', reverse('search'), classnames='icon icon-folder-inverse', order=10000)
+'''
 
+from django.urls import reverse
+from wagtail.core import hooks
 
-
-
+'''
+@hooks.register('register_account_menu_item')
+def register_account_delete_account(request):
+    return {
+        'url': reverse('account_inactive'),
+        'label': 'Delete account',
+        'help_text': 'This permanently deletes your account.'
+    }
+'''
 
 @hooks.register('filter_form_submissions_for_user')
 def construct_forms_for_user(user, queryset):
@@ -192,14 +204,23 @@ def construct_forms_for_user(user, queryset):
 
 class UserbarPuppyLinkItem:
     def render(self, request):
-        return '<li><a href="http://cuteoverload.com/tag/puppehs/" ' \
-            + 'target="_parent" class="action icon icon-wagtail">Puppies!</a></li>'
+        return '<div class="wagtail-userbar__item " ><div class="wagtail-action wagtail-icon wagtail-icon-edit"><a href="https://drivedex.ru/" ' \
+            + 'target="_parent" class="action icon icon-wagtail">GO HOME!</a></div></div>'
 
 @hooks.register('construct_wagtail_userbar')
 def add_puppy_link_item(request, items):
-    return items.append( UserbarPuppyLinkItem() )
+    return items.append(UserbarPuppyLinkItem())
 
+'''
+from wagtail.admin.userbar import AddPageItem, EditPageItem, ExplorePageItem
 
+@hooks.register('construct_wagtail_userbar')
+def delete_link_item(request, items):
+        items[:] = [item for item in items if isinstance(item,EditPageItem)]
+        for i in items:
+            print('item', i.render(request))
+
+'''
 
 
 
@@ -234,8 +255,46 @@ def delete_page_listing_button_items(buttons, page, page_perms, is_parent=False,
         print(button.label)
     print(page.owner, 'pageeeeeeeeeeeeeeeeeeeeee')
     print(buttons)
+@hooks.register('construct_page_listing_buttons')
+def delete_page_listing_button_items(buttons, page, page_perms, is_parent=False, context=None):
+        # buttons[:] = [button for button in buttons if button != 'EDIT']
+        buttons[:] = [button for button in buttons if button.label != 'Редактировать']
+
 
 @hooks.register('construct_page_listing_buttons')
 def delete_page_listing_button_items(buttons, page, page_perms, is_parent=False, context=None):
     # buttons[:] = [button for button in buttons if button != 'EDIT']
     buttons[:] = [button for button in buttons if button.label != 'Смотреть на сайте']
+@hooks.register('construct_page_listing_buttons')
+def delete_page_listing_button_items(buttons, page, page_perms, is_parent=False, context=None):
+    # buttons[:] = [button for button in buttons if button != 'EDIT']
+    buttons[:] = [button for button in buttons if button.label != 'View live']
+
+
+
+@hooks.register('construct_page_listing_buttons')
+def delete_page_listing_button_items(buttons, page, page_perms, is_parent=False, context=None):
+    # buttons[:] = [button for button in buttons if button != 'EDIT']
+    buttons[:] = [button for button in buttons if button.label != 'View draft']
+@hooks.register('construct_page_listing_buttons')
+def delete_page_listing_button_items(buttons, page, page_perms, is_parent=False, context=None):
+    # buttons[:] = [button for button in buttons if button != 'EDIT']
+    buttons[:] = [button for button in buttons if button.label != 'Смотреть черновик']
+
+
+
+@hooks.register('construct_page_listing_buttons')
+def delete_page_listing_button_items(buttons, page, page_perms, is_parent=False, context=None):
+    # buttons[:] = [button for button in buttons if button != 'EDIT']
+    buttons[:] = [button for button in buttons if button.label != 'More']
+@hooks.register('construct_page_listing_buttons')
+def delete_page_listing_button_items(buttons, page, page_perms, is_parent=False, context=None):
+    # buttons[:] = [button for button in buttons if button != 'EDIT']
+    buttons[:] = [button for button in buttons if button.label != 'Больше']
+
+
+
+@hooks.register('construct_page_listing_buttons')
+def delete_page_listing_button_items(buttons, page, page_perms, is_parent=False, context=None):
+    # buttons[:] = [button for button in buttons if button != 'EDIT']
+    buttons[:] = [button for button in buttons if button.label != 'More Actions']
