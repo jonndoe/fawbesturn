@@ -18,6 +18,10 @@ from django.urls import path
 
 
 urlpatterns = [
+
+    path('<page>/tags/<tag>/', tag_archive, name='tagged_archive'),
+    path('<page>/tags/', tag_archive, name='tagged_archive'),
+
     url(r'^django-admin/', admin.site.urls),
 
     url(r'^admin/', include(wagtailadmin_urls)),
@@ -30,7 +34,7 @@ urlpatterns = [
 
     url(r'^comments/', include('django_comments.urls')),
     url(r'^accounts/', include('allauth.urls')),
-    path('<page>/tags/<tag>/', tag_archive, name='tag_archive'),
+
 ]
 
 

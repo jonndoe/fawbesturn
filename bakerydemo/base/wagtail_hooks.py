@@ -169,19 +169,20 @@ def add_another_welcome_panel(request, panels):
 
 
 
-'''
-from django.urls import reverse
 
+from django.urls import reverse
+from django.urls import reverse_lazy
 #from wagtail.core import hooks
 from wagtail.admin.menu import MenuItem
 
 @hooks.register('register_admin_menu_item')
 def register_user10_menu_item():
-  return MenuItem('example Item', reverse('search'), classnames='icon icon-folder-inverse', order=10000)
-'''
+  return MenuItem('Go To Site', reverse_lazy('tagged_archive', kwargs={'page':'blog',}), classnames='icon icon-folder-inverse', order=10000)
 
-from django.urls import reverse
-from wagtail.core import hooks
+
+#from django.urls import reverse
+#from wagtail.core import hooks
+
 
 '''
 @hooks.register('register_account_menu_item')
@@ -192,6 +193,7 @@ def register_account_delete_account(request):
         'help_text': 'This permanently deletes your account.'
     }
 '''
+
 
 @hooks.register('filter_form_submissions_for_user')
 def construct_forms_for_user(user, queryset):

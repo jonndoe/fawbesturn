@@ -48,15 +48,11 @@
                     <p>Comments {% get_comment_count for page as comment_count %} {{ comment_count }}</p>
                 </div>
 
-
-
-
-
-                <div class="container">
+                <div class="">
                 {% if user.is_authenticated %}
                     {% get_comment_form for page as form %}
-                    <form action="{% comment_form_target %}" method="POST">
-                        <div class="form-group">
+                    <form action="{% comment_form_target %}" method="POST" class="">
+
                     {% csrf_token %}
                     {{ form.comment }}
                     {{ form.honeypot }}
@@ -64,8 +60,9 @@
                     {{ form.object_pk }}
                     {{ form.timestamp }}
                     {{ form.security_hash }}
-                        </div>
+
                     <input type="hidden" name="next" value="{% pageurl page %}#comments" />
+                    <br>
                     <input type="submit" class="btn btn-primary" value="Add comment" id="id_submit" />
                     </form>
                 {% else %}

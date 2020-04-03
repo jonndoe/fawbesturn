@@ -4,9 +4,9 @@
 {% block titletag %}{% trans "Sign in" %}{% endblock %}
 {% block bodyclass %}login{% endblock %}
 
-{% block branding_login %}Sign in to DRIVEDEX{% endblock %}
+{% block branding_login %}{% trans "Log In to " %}<a href="/">DRIVEDEX</a>{% endblock %}
 
 {% block submit_buttons %}
     <button type="submit" class="button button-longrunning" data-clicked-text="{% trans 'Signing in…' %}"><span class="icon icon-spinner"></span><em>{% trans 'Sign in' %}</em></button>
-    <a href="https://www.drivedex.ru" class="button button-longrunning" data-clicked-text="{% trans 'Go to DriveDex' %}"><span class="icon icon-spinner"></span><em>{% trans 'Drivedex' %}</em></a>
+    <a href="{% url 'account_signup' %}" class="button button-secondary button-longrunning" data-clicked-text="{% trans 'Sign Up' %}"><span class="icon icon-spinner"></span><em>{% trans 'Sign Up' %}</em></a>
 {% endblock %}

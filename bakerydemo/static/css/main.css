@@ -726,8 +726,9 @@ span.outline {
 /* Form detail page */
 .form-page input, textarea, select {
   display: block;
-  min-width: 450px;
-  max-width: 450px;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 20vh;
 }
 
 .form-page li input[type=checkbox], input[type=radio] {
@@ -1081,3 +1082,32 @@ span.outline {
     border-bottom: 1px dotted #ccc;
 }
 
+.halloeditor:focus, .tagit:focus, input:focus, select:focus, textarea:focus {
+    background-color: #f2fcfc;
+    border-color: #00b0b1;
+}
+
+.halloeditor, .tagit, input, select, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 100%;
+    font-family: Open Sans,Arial,sans-serif;
+    border: 1px solid #e6e6e6;
+    padding: .9em 1.2em;
+    background-color: #fafafa;
+    color: #1a1a1a;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.field {
+    box-sizing: border-box;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
+}
