@@ -211,7 +211,7 @@ WAGTAILSEARCH_BACKENDS = {
 }
 
 # Wagtail settings
-WAGTAIL_SITE_NAME = "fawbesturn"
+WAGTAIL_SITE_NAME = "bbbbbbbbb"
 
 
 # comments
@@ -237,15 +237,17 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_TIMEOUT = 5
+#EMAIL_TIMEOUT = 5
 EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_PORT = 587
-#EMAIL_PORT = 465
+EMAIL_PORT = 587 #for tls
+#EMAIL_PORT = 465 #for ssl
 EMAIL_HOST_USER = "drivedex@yandex.ru"
 EMAIL_HOST_PASSWORD = "12357896321drivedex"
-EMAIL_USE_SSL = True
-#EMAIL_USE_TLS = True
+#EMAIL_USE_SSL = True
+EMAIL_USE_TLS = True
 
 SERVER_EMAIL = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+

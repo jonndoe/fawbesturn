@@ -442,6 +442,7 @@ def create_user_group_and_pages(sender, **kwargs):
     )
     '''
 
+
     # Create new GroupCollectionPermission for Profile Images collection
     GroupCollectionPermission.objects.create(
         group=new_group,
