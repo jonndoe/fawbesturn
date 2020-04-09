@@ -7,9 +7,6 @@ ALLOWED_HOSTS = ['80.78.254.210','localhost', 'www.moreforum.ru', 'www.drivedex.
 
 DEBUG = os.getenv('DJANGO_DEBUG', 'off') == 'on'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-
 # CACHING IN PRODUCTION
 CACHE_MIDDLEWARE_ALIAS = 'default'
 CACHE_MIDDLEWARE_SECONDS = 604800
